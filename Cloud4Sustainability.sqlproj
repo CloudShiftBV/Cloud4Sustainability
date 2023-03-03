@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Cloud4Sustainability</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{C54BDC66-D7ED-4D53-B046-E36BFFCEEED6}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Cloud4Sustainability</RootNamespace>
+    <AssemblyName>Cloud4Sustainability</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(NetCoreBuild)' == 'true'" Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(NetCoreBuild)' != 'true' AND '$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(NetCoreBuild)' != 'true' AND '$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <PackageReference Condition="'$(NetCoreBuild)' == 'true'" Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+  </ItemGroup>
+  <Target Name="BeforeBuild">
+    <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
+  </Target>
+  <ItemGroup>
+    <Build Include="dbo\Tables\WasteGeneratedInOperations.sql" />
+    <Build Include="dbo\Tables\VehicleType.sql" />
+    <Build Include="dbo\Tables\ValueChainPartner.sql" />
+    <Build Include="dbo\Tables\UnitGroup.sql" />
+    <Build Include="dbo\Tables\Unit.sql" />
+    <Build Include="dbo\Tables\TransportMode.sql" />
+    <Build Include="dbo\Tables\TransportationAndDistribution.sql" />
+    <Build Include="dbo\Tables\Subindustry.sql" />
+    <Build Include="dbo\Tables\StationaryCombustion.sql" />
+    <Build Include="dbo\Tables\SpendType.sql" />
+    <Build Include="dbo\Tables\PurchasedGoodAndService.sql" />
+    <Build Include="dbo\Tables\PurchasedEnergy.sql" />
+    <Build Include="dbo\Tables\OrganizationalUnit.sql" />
+    <Build Include="dbo\Tables\OrganizationalProfile.sql" />
+    <Build Include="dbo\Tables\OrganizationalHierarchy.sql" />
+    <Build Include="dbo\Tables\MonthlyRevenue.sql" />
+    <Build Include="dbo\Tables\MobileCombustion.sql" />
+    <Build Include="dbo\Tables\Material.sql" />
+    <Build Include="dbo\Tables\IndustryClassification.sql" />
+    <Build Include="dbo\Tables\Industry.sql" />
+    <Build Include="dbo\Tables\IndustrialProcessType.sql" />
+    <Build Include="dbo\Tables\IndustrialProcess.sql" />
+    <Build Include="dbo\Tables\GreenhouseGas.sql" />
+    <Build Include="dbo\Tables\FugitiveEmission.sql" />
+    <Build Include="dbo\Tables\FuelType.sql" />
+    <Build Include="dbo\Tables\FactorMapping.sql" />
+    <Build Include="dbo\Tables\FactorLibrary.sql" />
+    <Build Include="dbo\Tables\FacilityUsageDetail.sql" />
+    <Build Include="dbo\Tables\Facility.sql" />
+    <Build Include="dbo\Tables\EstimationFactor.sql" />
+    <Build Include="dbo\Tables\EmissionsSource.sql" />
+    <Build Include="dbo\Tables\EmissionFactor.sql" />
+    <Build Include="dbo\Tables\Emission.sql" />
+    <Build Include="dbo\Tables\DisposalMethod.sql" />
+    <Build Include="dbo\Tables\CountryRegionMapping.sql" />
+    <Build Include="dbo\Tables\ContractualInstrumentType.sql" />
+    <Build Include="dbo\Tables\CapitalGood.sql" />
+    <Build Include="dbo\Tables\BusinessTravelType.sql" />
+    <Build Include="dbo\Tables\BusinessTravel.sql" />
+    <Build Include="dbo\Tables\AccommodationType.sql" />
+  </ItemGroup>
+</Project>

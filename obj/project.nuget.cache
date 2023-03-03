@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "J9ePKY96w2ozcEPd3RM/yK8shsddSC7baxGF7GXKz1sbDZaRSjTs+lDi0ysO+SYS1+ov218m5EnShswWWuYEpA==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\Bryce\\Desktop\\Cloud4Sustainability\\Cloud4Sustainability.sqlproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bryce\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\Bryce\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net46\\1.0.0\\microsoft.netframework.referenceassemblies.net46.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
