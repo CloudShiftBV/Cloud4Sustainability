@@ -4,7 +4,7 @@ This project is based on the [Microsoft Cloud for Sustainability data model](htt
 
 Use the following for quick access to the .DACPAC or .SQL files:
 
-[![Download DACPAC](https://www.file-extension.info/images/resource/formats/dacpac.png)](https://github.com/CloudShiftBV/Cloud4Sustainability/blob/master/bin/Debug/Cloud4Sustainability.dacpac) [![Download SQL Script](https://www.file-extension.info/images/resource/formats/sql.png)](https://github.com/CloudShiftBV/Cloud4Sustainability/blob/master/bin/Debug/Cloud4Sustainability.sql)
+[![Download DACPAC](https://www.file-extension.info/images/resource/formats/dacpac.png)](https://github.com/CloudShiftBV/Cloud4Sustainability/blob/master/bin/Debug/Cloud4Sustainability.dacpac) [![Download SQL Script](https://www.file-extension.info/images/resource/formats/sql.png)](https://github.com/CloudShiftBV/Cloud4Sustainability/blob/master/bin/Debug/Cloud4Sustainability_T-SQL.sql)
 
 
 The image below is a static representation of the Cloud for Sustainability data model. To view the dynamic representation of the data model click on the image.
